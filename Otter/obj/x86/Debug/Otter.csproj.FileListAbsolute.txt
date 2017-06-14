@@ -1,0 +1,16 @@
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\csfml-audio-2.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\csfml-graphics-2.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\csfml-system-2.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\csfml-window-2.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\openal32.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\csfml-network-2.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\libsndfile-1.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\Otter.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\Otter.pdb
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\sfmlnet-audio-2.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\sfmlnet-graphics-2.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\sfmlnet-system-2.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\sfmlnet-window-2.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\obj\x86\Debug\Otter.dll
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\obj\x86\Debug\Otter.pdb
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\obj\x86\Debug\Otter.csprojResolveAssemblyReference.cache
