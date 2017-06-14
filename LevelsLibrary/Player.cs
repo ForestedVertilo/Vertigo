@@ -22,7 +22,7 @@ namespace LevelsLibrary
             StopLeft,
             StopRight
         }
-        Spritemap<Animation_Walk> spritemap = new Spritemap<Animation_Walk>("Resources\\character.png", 16, 16);
+        Spritemap<Animation_Walk> spritemap = new Spritemap<Animation_Walk>("Resources\\character.png",12,12);
         public Player(float x, float y) : base(x, y)
         {
             this.Layer = -10000;
@@ -37,14 +37,20 @@ namespace LevelsLibrary
             spritemap.Play(Animation_Walk.StopDown);
             AddGraphic(spritemap);
             SetHitbox(12, 12, Tags.Player);
+            
         }
 
         bool text_win = true;
         public override void Update()
         {
-
+            if (Global.SaveInput == true)
+            {
+                X = Global.X;
+                Y = Global.Y;
+                Global.SaveInput = false;
+            }
             base.Update();
-            
+
             if (text_win != false)
             {
                 if (Input.KeyDown(Key.Up) || Input.KeyDown(Key.W))
@@ -87,7 +93,7 @@ namespace LevelsLibrary
                     spritemap.Play(Animation_Walk.StopRight);
 
             }
-            
+
             if (Overlap(X, Y, Tags.Exit))
             {
                 text_win = false;
@@ -105,7 +111,41 @@ namespace LevelsLibrary
             {
                 Game.AddScene(new PauseMenuScene(Scene.CameraCenterX, Scene.CameraCenterY));
             }
-            
+            if (Input.KeyPressed(Key.Insert))
+                using (FileStream fl_save = new FileStream("test.txt", FileMode.Create))
+                {
+                    string _textSave = Global.CurrentLevel + " " + X + " " + Y;
+                    byte[] textSave = System.Text.Encoding.Default.GetBytes(_textSave);
+                    fl_save.Write(textSave, 0, textSave.Length);
+                }
+            //if (Input.KeyPressed(Key.Space))
+            //    for (int i = 0; i <= 1; i++)
+            //        using (FileStream fl_save = File.OpenRead("test.txt"))
+            //        {
+            //            byte[] textSave = new byte[fl_save.Length];
+            //            fl_save.Read(textSave, 0, textSave.Length);
+            //            string[] _textsave = System.Text.Encoding.Default.GetString(textSave).Split(Convert.ToChar(" "));
+            //            if (Global.CurrentLevel != int.Parse(_textsave[0]))
+            //            {
+            //                Global.ClearLevel();
+            //                Global.X = float.Parse(_textsave[1]);
+            //                Global.Y = float.Parse(_textsave[2]);
+            //                Global.SaveInput = true;
+            //                text_win = true;
+            //                Game.SwitchScene(Global.GetLevel(int.Parse(_textsave[0])));
+            //                X = float.Parse(_textsave[1]);
+            //                Y = float.Parse(_textsave[2]);
+            //            }
+            //            else
+            //            {
+            //                X = float.Parse(_textsave[1]);
+            //                Y = float.Parse(_textsave[2]);
+            //            }
+
+
+            //        }
+
+
         }
 
     }
@@ -121,6 +161,11 @@ namespace LevelsLibrary
             base.Update();
             if (Input.KeyPressed(Key.Pause))
                 Game.RemoveScene();
+            if (Input.KeyPressed(Key.Q))
+            { Game.SwitchScene(new StartScene());
+                Global.ClearLevel();
+            }
+
         }
     }
     class PauseMenu : Entity
@@ -130,11 +175,16 @@ namespace LevelsLibrary
             Image backgr = Image.CreateRectangle(320, 240, Color.White);
             AddGraphic(backgr);
             Text textmenu = new Text("Paused", 20);
+            Text textMenu = new Text("Q - Menu", 10);
             textmenu.Color = Color.Black;
+            textMenu.Color = Color.Black;
             textmenu.SetPosition(Game.Instance.HalfWidth, Game.Instance.HalfHeight);
+            textMenu.SetPosition(Game.Instance.HalfWidth,15);
             textmenu.CenterOrigin();
+            textMenu.CenterOrigin();
             AddGraphic(textmenu);
-            
+            AddGraphic(textMenu);
+
         }
         
     }
