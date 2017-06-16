@@ -117,35 +117,7 @@ namespace LevelsLibrary
                     string _textSave = Global.CurrentLevel + " " + X + " " + Y;
                     byte[] textSave = System.Text.Encoding.Default.GetBytes(_textSave);
                     fl_save.Write(textSave, 0, textSave.Length);
-                }
-            //if (Input.KeyPressed(Key.Space))
-            //    for (int i = 0; i <= 1; i++)
-            //        using (FileStream fl_save = File.OpenRead("test.txt"))
-            //        {
-            //            byte[] textSave = new byte[fl_save.Length];
-            //            fl_save.Read(textSave, 0, textSave.Length);
-            //            string[] _textsave = System.Text.Encoding.Default.GetString(textSave).Split(Convert.ToChar(" "));
-            //            if (Global.CurrentLevel != int.Parse(_textsave[0]))
-            //            {
-            //                Global.ClearLevel();
-            //                Global.X = float.Parse(_textsave[1]);
-            //                Global.Y = float.Parse(_textsave[2]);
-            //                Global.SaveInput = true;
-            //                text_win = true;
-            //                Game.SwitchScene(Global.GetLevel(int.Parse(_textsave[0])));
-            //                X = float.Parse(_textsave[1]);
-            //                Y = float.Parse(_textsave[2]);
-            //            }
-            //            else
-            //            {
-            //                X = float.Parse(_textsave[1]);
-            //                Y = float.Parse(_textsave[2]);
-            //            }
-
-
-            //        }
-
-
+                }   
         }
 
     }

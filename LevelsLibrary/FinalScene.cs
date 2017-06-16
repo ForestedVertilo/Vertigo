@@ -18,7 +18,7 @@ namespace LevelsLibrary
         public override void Update()
         {
             base.Update();
-            Add(new FinalTextScene("КОНЕЦ!","Всем спасибо!\nАнька чмок, а у Вовы пантсушот. \nОБЭМА!!!"));
+            Add(new FinalTextScene("КОНЕЦ!","Всем спасибо!"));
         }
     }
     class FinalTextScene : Entity
@@ -28,7 +28,7 @@ namespace LevelsLibrary
         {
             X = Game.Instance.HalfWidth;
             Y = Game.Instance.HalfHeight;
-            textSmall = new Text(b, 16);
+            textSmall = new Text(b, 12);
             textSmall.CenterOrigin();
             textSmall.Color = Color.White;
             textBig = new Text(a, 20);

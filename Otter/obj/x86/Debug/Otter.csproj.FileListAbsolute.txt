@@ -13,3 +13,4 @@ C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\s
 C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\bin\Debug\sfmlnet-window-2.dll
 C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\obj\x86\Debug\Otter.dll
 C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\obj\x86\Debug\Otter.pdb
+C:\Users\Strigoi\Documents\Visual Studio 2017\Projects\Vertigo\Otter\obj\x86\Debug\Otter.csprojResolveAssemblyReference.cache
