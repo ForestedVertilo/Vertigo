@@ -49,7 +49,7 @@ namespace LevelsLibrary
                 Y = Global.Y;
                 Global.SaveInput = false;
             }
-            base.Update();
+            base.Update();  
 
             if (text_win != false)
             {

@@ -15,38 +15,7 @@ namespace LevelsLibrary
             Add(new MenuText());
         }
     }
-    class Logo : Entity
-    {
-        Image img = new Image("Resources\\Logo.png");
-        public Logo()
-        {
-            img.Alpha = 0;
-            AddGraphic(img);
-        }
-        bool logo_vision = false;
-        public override void Update()
-        {
-            base.Update();
-            if (logo_vision == false)
-            {
-                img.Alpha += 0.01f;
-                if (img.Alpha == 1)
-                {
-                    logo_vision = true;
-                    System.Threading.Thread.Sleep(1000);
-                }
-            }
-            else if (logo_vision == true)
-            {
-                img.Alpha -= 0.01f;
-                if (img.Alpha == 0)
-                {
-                    Scene.Add(new MenuText());
-                    RemoveSelf();
-                };
-            }
-        }
-    }
+    
     class MenuText : Entity
     {
         RichText text1, text2;
@@ -63,7 +32,6 @@ namespace LevelsLibrary
             text1.Color = Color.Green;
             text2.Color = Color.Black;
             textSave.Color = Color.Black;
-            
             textPause.Color = Color.Black;
             textSave.CenterOrigin();
             textPause.CenterOrigin();
@@ -121,8 +89,6 @@ namespace LevelsLibrary
                         Global.Y = float.Parse(_textsave[2]);
                         Global.SaveInput = true;
                         Game.SwitchScene(Global.GetLevel(int.Parse(_textsave[0])));
-
-
                     }
                 }
             }
